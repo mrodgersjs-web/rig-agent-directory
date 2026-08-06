@@ -1,0 +1,200 @@
+[
+  {
+    "name": "rig-command-registry-audit",
+    "category": "Agent Operations",
+    "description": "Rank/port commands across 5 RIG harnesses.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-cross-family-verify",
+    "category": "Review & QA",
+    "description": "Iterative cross-family adversarial review loop.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-cron-fleet-orchestrator",
+    "category": "Fleet & Infrastructure",
+    "description": "Operator-grade cron fleet orchestration across heterogeneous local AI nodes. Pin crons to valid live providers (NOT stale config files), persist substrate to disk as proof, run independent Doer/Checker/Validator cron trios, and write durable local status JSON after every cycle. USE WHEN running parallel cron swarms across local Ollama/Ollama-MLX nodes, scraping substrate for agent fleets, validating that provider names from config.yaml actually exist before pinning, building independent quality-gate cron trios, or recovering when a live API dashboard (Paperclip/Linear) breaks mid-sprint. NOT for generic cron syntax, single-model single-machine workflows, or doing the work directly in the agent loop (use task-agent delegation instead).",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-memory-os",
+    "category": "Knowledge & Memory",
+    "description": "Use the local RIG Memory OS for scoped event capture, context retrieval, future intentions, and speculative predictions.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-intel-scrape-operations",
+    "category": "Intelligence & Scraping",
+    "description": "Operational patterns for rig-intel-scrape cron jobs. Covers GBrain publishing (MCP + direct Postgres), TCC blocking fallbacks, content fingerprinting, and scan gap detection.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-linkedin-studio-engine-builder",
+    "category": "Content & GTM",
+    "description": "Build LinkedIn Studio A1A3A4 engines.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-gtm-operations",
+    "category": "Content & GTM",
+    "description": "Run a full GTM department \u2014 prospect sourcing, email outreach, pipeline management, conference prep, conversion optimization, AND the daily lead scoring & prioritization cron (5-factor composite framework, top-10 outreach batch). Use when building or operating any GTM/sales function for RIG or similar B2B services companies, or when the Darius daily lead-scoring cron fires.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-wayfinder-operator",
+    "category": "Agent Operations",
+    "description": "Run wayfinder maps in RIG. Override, parallel sessions.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-corpus-distillation-pipeline",
+    "category": "Knowledge & Memory",
+    "description": "Distill a primary source corpus into RIG assets.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-multiphase-handoff-execution",
+    "category": "Agent Operations",
+    "description": "Execute phased handoffs in rig-intelligence. Owns the gates.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-higgsfield-workforce",
+    "category": "Content & GTM",
+    "description": "RIG x Higgsfield AI Employee Workforce. 6 skills, 5 custom employees, brand kit, CLI orchestration. Use when generating RIG creative assets, content packs, sales materials, or competitor intelligence.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-video-doctrine-pipeline",
+    "category": "Doctrine & Governance",
+    "description": "Extract transcripts from agentic coding videos (YouTube), analyze for patterns/techniques/workflows, and generate RIG doctrine artifacts: skills, harnesses, agents, and L10 modules. Use when ingesting video knowledge into the RIG operating system.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-github-issue-writer",
+    "category": "Dev Tooling",
+    "description": "Create structured GitHub issues from bug reports, feature suggestions, and user feedback. Maintains consistent issue format with source attribution, overview, requirements, and considerations. Integrates with screenshot automation for visual evidence. Use when encountering bugs or receiving feature requests.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-triple-review",
+    "category": "Review & QA",
+    "description": "Run 3 independent adversarial reviewers in parallel, each with a different critical lens. Findings are merged, deduplicated by confidence, and returned as a prioritized action list. Use when you need multi-perspective feedback on a plan, feature, code change, or strategy.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-stress-test",
+    "category": "Review & QA",
+    "description": "5-phase sequential adversarial review panel. Each phase attacks from a different angle: find flaws, imagine failure, argue opposition, find contradictions, then synthesize a verdict. Use when you need deep adversarial analysis of a plan, strategy, or major feature.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-close-session",
+    "category": "Knowledge & Memory",
+    "description": "Auto-session memory: encodes session knowledge into repo-committed files so the next session starts informed. Updates AGENTS.md, learnings, tech debt, and handover files. Can run on-demand or auto-trigger on session close. Use at the end of every meaningful coding/agent session.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-linkedin-ops",
+    "category": "Content & GTM",
+    "description": "Set up and operate a LinkedIn content department as an AI agent team. Covers subagent architecture, 7-layer memory, quality gates, 24/7 cron fleet, intel corpus, content production pipeline, and global engagement. Use when building any agent-driven social media or content operation.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-strategy-teaser",
+    "category": "Content & GTM",
+    "description": "RIG see-themselves strategy-teaser production line (v2). Use PROACTIVELY when asked to build, rebuild, or score a single-firm strategy teaser page. Deterministic mirror-then-emerge pages that open a free initial assessment, clear the gold-gate >= 8.0 plus the 8-item mirror checklist, and stop dormant at the human-armed deploy gate.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-docker-stack",
+    "category": "Fleet & Infrastructure",
+    "description": "Start and manage the RIG agentic tools Docker stack (n8n, LangFuse, Dify) via Colima on macOS",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-dept-daily-cycle-operator",
+    "category": "Department Management",
+    "description": "Operate any RIG department's `daily-goal` cron when it fires \u2014 the 8-step base spec (scrape \u2192 entities \u2192 patterns \u2192 GBrain + Supabase + Obsidian + local substrate writes \u2192 state \u2192 sealed ProofPacket), with compound-cycle behavior, blocklist enforcement, and the canonical entity page schema (frontmatter + ## Facts fence + DP checklist + contract variants). Use when a department's every-4h or daily cron fires and the cron spec is `~/.rig/departments/cron-specs/<dept>.cron.json`, when Mike says 'run the <dept> daily cycle', or when writing entities+patterns to a department's substrate under L4-D1-A3-I2.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-dept-daily-goal-builder",
+    "category": "Department Management",
+    "description": "Per-department RIG daily-goal cron that writes a fixed batch of fresh substrate (entities + topics) against the dept's existing scraped corpus, with proof-packet sealing, dept-verifier gate, and freshness score >= target. USE WHEN running a cron that fires against ~/.rig/departments/<dept>/, must hit a fixed entity/topic count, needs to keep fresh-content pct above a target across cycles, requires word-boundary blocklist checking against short tokens, or wants per-artifact sha256 proof sealed to ~/.rig/departments/<dept>/proof/. NOT for fleet provider-pinning (use rig-cron-fleet-orchestrator), single-shot scraping (use scripts/scraper_template.py under rig-cron-fleet-orchestrator), or ad-hoc research (use Research skill).",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-agent-gate-d-delegation",
+    "category": "Doctrine & Governance",
+    "description": "Delegate Gate-D authority from Mike to a named RIG agent (Darius, Eleanor, Nadia, etc.) so the agent can take specific GTM/accounting/operations actions without Mike approving every individual step. Use when Mike says 'Darius has to approve gtm efforts', 'Eleanor can sign under $5K', 'Nadia scores the leads', or any 'delegate X to agent Y with limits' directive. Class-level skill \u2014 works for any agent \u00d7 any action-type delegation, not just GTM.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-dept-substrate-intake",
+    "category": "Department Management",
+    "description": "Canonical RIG department-substrate intake workflow. Takes a raw source (YouTube URL, blog post, podcast episode, research paper) and produces the standard intake artifact set \u2014 raw input + cleaned transcript + intake.json (structured classification) + DIGEST.md (human digest) \u2014 routed to the right department (gtm, sales, linkedin, content, research). Includes yt-dlp vs youtube-transcript-api selection, auto-sub overlap-collapse cleaning, URL sanitization, and the follow-up cron proposal pattern. Use when the parent agent delegates with 'intake this [source] for the [dept] substrate', 'classify and digest', or any variation of the substrate-ingest pattern.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-site-forensics",
+    "category": "Dev Tooling",
+    "description": "Trace where a RIG website is deployed, find old versions, and recover lost site content across Vercel, Cloudflare Pages, GitHub, and local directories. Use when Mike says a site \"changed\", \"disappeared\", \"is wrong\", or asks \"where is the old version\".",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-gtm-24-7-operations",
+    "category": "Content & GTM",
+    "description": "Operate a 24/7 GTM engine with hourly cron scheduling, Telegram reporting, and multi-channel outreach automation. Use when setting up always-on sales operations, automated daily reports, or continuous prospect sourcing.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-pai-upgrade",
+    "category": "Department Management",
+    "description": "Upgrade a named RIG department agent from persona to full PAI operating system. Use when Mike asks to 'make [agent] a real PAI', 'upgrade [agent] substrate', 'give [agent] a command system', or when a department agent has a registry entry but lacks substrate, team model, daily loop, quality contracts, data model, or proof path. Applies to Darius, Ralph, Julie, and any future department head.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-doctrine-infrastructure-wiring",
+    "category": "Doctrine & Governance",
+    "description": "Wire new doctrine, subsystem specs, or major capabilities into the RIG agent infrastructure. Use when adding a new doctrine file, convergence subsystem, policy bundle, or capability that ALL RIG agents (Jake, Hermes, Claude, Codex, department agents, workers) must load. Covers the 6 mandatory infrastructure points and the exact patch patterns for each.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-deviate-design",
+    "category": "Design & Deviation",
+    "description": "Apply RIG Deviation Engines as a design system methodology \u2014 map the 40 abstract physics/nature/cognitive engines to concrete UI design tokens, rules, spacing systems, animation timing, and scoring rubrics. Use when pushing a design system to \u00b130\u03c3 quality using deviation engine principles.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-department-agent-upgrade",
+    "category": "Department Management",
+    "description": "Upgrade named RIG department agents from persona/role into full PAI operating systems \u2014 substrate, goals, loops, skills, harnesses, quality profiles, data models. Use when building or upgrading any department agent.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-knowledge-ingestion",
+    "category": "Knowledge & Memory",
+    "description": "Scrape, process, and ingest knowledge (YouTube transcripts, arXiv papers, web content) into agent vaults. Use when building knowledge bases for department agents or need to research a domain at scale.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-agent-swarm-app-build",
+    "category": "Agent Operations",
+    "description": "Orchestrate parallel agent swarms to build complete applications \u2014 research, design system, screens, features, tests, distribution. Use when the user says 'build the whole app', '1000x upgrade', 'bring in the full team', 'reverse engineer top apps', 'complete all recommendations', or asks for a massive multi-module build across research + design + engineering + distribution.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-knowledge-engine",
+    "category": "Knowledge & Memory",
+    "description": "Per-department knowledge ingestion pipeline for RIG agents. Scrapes YouTube transcripts, arXiv papers, web content, and consensus.app for each of 12 department agents. Processes into Obsidian notes that auto-sync to GBrain. Use when building agent knowledge bases, scraping domain-specific reference material, or populating agent vaults with evidence.",
+    "repo": "rig-skills"
+  },
+  {
+    "name": "rig-supabase-schema-provisioning",
+    "category": "Fleet & Infrastructure",
+    "description": "Provision Supabase Postgres schemas from RIG cron/JAKE-SETUP tasks when no `supabase-helper` CLI or `psql` binary exists on the host. Covers connection-string assembly from `~/.hermes/.env`, idempotent DDL patterns, ad-hoc verification against the live DB, and the `/var/folders/.../T` write_file workaround. USE WHEN a JAKE-SETUP or RIG cron task asks to create tables/indexes on the Supabase project, \"ensure schema X exists\", \"create dept_* tables\", or any Supabase DDL without an obvious CLI helper.",
+    "repo": "rig-skills"
+  }
+]

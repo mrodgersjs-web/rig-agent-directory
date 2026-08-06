@@ -1,0 +1,176 @@
+[
+  {
+    "name": "agency-studio",
+    "description": "Agency studio \u2014 department-shaped agent teams with hard role boundaries",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "app-factory-studio",
+    "description": "App factory studio \u2014 spec paragraph to deterministic app scaffold with proof gates",
+    "tests": 1,
+    "stars": 0
+  },
+  {
+    "name": "birch-rig-boots",
+    "description": "BJR \u2014 boot configurator experience site (e2e: 17/21 baseline, 21/21 target)",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "communications-studio",
+    "description": "Communications studio \u2014 gated protocol engine with scored formulas and hard gates",
+    "tests": 2,
+    "stars": 0
+  },
+  {
+    "name": "design-studio",
+    "description": "Design studio \u2014 public tokens, components, and FDE UI review checklists",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "doctrine",
+    "description": "Operating doctrine agents load before they act \u2014 proof standards, gates, TAC rules",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "fde-portfolio",
+    "description": "Forward Deployed Engineer portfolio \u2014 discovery to go-live playbooks, evals, handoff templates",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "jake-studio",
+    "description": "Jake studio \u2014 local-first operator layer with L10 self-evolving harness and closed loops",
+    "tests": 3,
+    "stars": 0
+  },
+  {
+    "name": "mesh-studio",
+    "description": "Mesh studio \u2014 probe, boot, recover multi-node AI subsystems with proof",
+    "tests": 10,
+    "stars": 0
+  },
+  {
+    "name": "mike-rodgers-site",
+    "description": "Personal site \u2014 Forward Deployed Engineer \u00b7 links to mrodgersjs-web studios",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "mrodgersjs-web",
+    "description": "Profile README \u2014 Forward Deployed Engineer \u00b7 governed AI systems",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "mrodgersjs-web-teammate",
+    "description": "npx mrodgersjs-web \u2014 install Mike Rodgers as a local Forward Deployed Engineer teammate",
+    "tests": 1,
+    "stars": 0
+  },
+  {
+    "name": "openwork",
+    "description": "OpenWork power-user workstation with v5 audit chain, v10 cards/undo/workflow, and 36GB RIG node integration",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "patents",
+    "description": "Patent family status teaser \u2014 no claims, no enabling IP",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "proof-gate-action",
+    "description": "GitHub Action that fails a PR unless it ships a signed ProofPacket \u2014 no proof, no merge",
+    "tests": 7,
+    "stars": 0
+  },
+  {
+    "name": "proof-studio",
+    "description": "Signed ProofPackets that catch AI agents when they lie about done",
+    "tests": 21,
+    "stars": 0
+  },
+  {
+    "name": "resume",
+    "description": "Mike Rodgers \u2014 Forward Deployed Engineer resume (markdown + PDF + docx)",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "rig-agent-directory",
+    "description": "The complete capability index \u2014 33 skills, 232 domain agents, 29 repos, 40 deviation engines",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "rig-agent-firm",
+    "description": "GitHub-native agent firm \u2014 17 repos = 17 role-agents with heartbeat telemetry and forkable constitution",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "rig-ai-engineering",
+    "description": "Deterministic prompt-intelligence engine \u2014 score, enhance, and fix prompts with a 4-axis rubric",
+    "tests": 1,
+    "stars": 0
+  },
+  {
+    "name": "rig-deviate",
+    "description": "Push AI output past the generic median \u2014 40 orthogonal deviation engines and a Robust-MAD-Z scorer",
+    "tests": 1,
+    "stars": 0
+  },
+  {
+    "name": "rig-doctrine-overlay",
+    "description": "Make any AI repo 1000x governed \u2014 drop-in proof-gate, AGENTS.md, and spec/BDD overlay",
+    "tests": 2,
+    "stars": 0
+  },
+  {
+    "name": "rig-domain-agents",
+    "description": "232 specialized agent role specs across 16 professional departments",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "rig-enhanced-agent-ops",
+    "description": "Action-gated agent operations \u2014 audit trail, verifier, and tamper-evident proof chain",
+    "tests": 5,
+    "stars": 0
+  },
+  {
+    "name": "rig-enhanced-evals",
+    "description": "L10 self-evolving evaluation harness for agent output quality",
+    "tests": 4,
+    "stars": 0
+  },
+  {
+    "name": "rig-enhanced-guardrails",
+    "description": "LLM output validation with proof-gated completion",
+    "tests": 3,
+    "stars": 0
+  },
+  {
+    "name": "rig-skills",
+    "description": "33 curated operational skills for running the RIG agent system",
+    "tests": 0,
+    "stars": 0
+  },
+  {
+    "name": "rigforge",
+    "description": "Deterministic 7-phase agentic engineering platform \u2014 CLI, MCP servers, GEV contract models",
+    "tests": 20,
+    "stars": 0
+  },
+  {
+    "name": "strategy-studio",
+    "description": "Strategy studio \u2014 deterministic strategy routing with gated decision records",
+    "tests": 1,
+    "stars": 0
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "codename": "GRAVITON",
+    "layer": "Cognitive",
+    "full_name": "Gravity Escape",
+    "description": "surprising, category-defying, memorable"
+  },
+  {
+    "codename": "ANCHOR",
+    "layer": "Cognitive",
+    "full_name": "Reality Anchor",
+    "description": "evidence-dense, source-anchored"
+  },
+  {
+    "codename": "DARWIN",
+    "layer": "Cognitive",
+    "full_name": "Evolutionary Selection",
+    "description": "iterated, selected, pressure-tested"
+  },
+  {
+    "codename": "XRAY",
+    "layer": "Cognitive",
+    "full_name": "Feynman X-Ray",
+    "description": "precise, concrete, explainable to a novice"
+  },
+  {
+    "codename": "FORGE",
+    "layer": "Cognitive",
+    "full_name": "Mechanism Furnace",
+    "description": "mechanism-dense, causal, operational"
+  },
+  {
+    "codename": "BREAKER",
+    "layer": "Cognitive",
+    "full_name": "Rupture Engine",
+    "description": "contrarian, frame-breaking, orthogonal"
+  },
+  {
+    "codename": "COLLIDER",
+    "layer": "Cognitive",
+    "full_name": "Collision Collider",
+    "description": "cross-domain recombination"
+  },
+  {
+    "codename": "VOLT",
+    "layer": "Cognitive",
+    "full_name": "Voltage Reactor",
+    "description": "genuinely felt stakes, no coercion"
+  },
+  {
+    "codename": "ECHO",
+    "layer": "Cognitive",
+    "full_name": "Memory Residue",
+    "description": "sticky, quotable, durable recall"
+  },
+  {
+    "codename": "HORIZON",
+    "layer": "Cognitive",
+    "full_name": "Temporal Horizon Integrity",
+    "description": "optionality-rich, reversible bets"
+  },
+  {
+    "codename": "SOVEREIGN",
+    "layer": "Cognitive",
+    "full_name": "Autonomy Calibration",
+    "description": "agency-respecting, transparent"
+  },
+  {
+    "codename": "SURPRISE",
+    "layer": "Cognitive",
+    "full_name": "Predictive Error Calibration",
+    "description": "genuinely surprising yet coherent"
+  },
+  {
+    "codename": "LOOP",
+    "layer": "Cognitive",
+    "full_name": "Zeigarnik Residue",
+    "description": "curiosity loops, serialized intrigue"
+  },
+  {
+    "codename": "VISCERA",
+    "layer": "Cognitive",
+    "full_name": "Somatic Marker",
+    "description": "physically felt consequences"
+  },
+  {
+    "codename": "REBOUND",
+    "layer": "Cognitive",
+    "full_name": "Opponent Process",
+    "description": "dynamic contrast, earned resolution"
+  },
+  {
+    "codename": "PRISM",
+    "layer": "Cognitive",
+    "full_name": "Signal-to-Noise Discriminability",
+    "description": "sharp signal, clean structure"
+  },
+  {
+    "codename": "WELLSPRING",
+    "layer": "Cognitive",
+    "full_name": "Hedonic Adaptation Resistance",
+    "description": "layered, rewarding revisits"
+  },
+  {
+    "codename": "GLYPH",
+    "layer": "Cognitive",
+    "full_name": "Kolmogorov Originality",
+    "description": "incompressible, irreducible expression"
+  },
+  {
+    "codename": "BAYES",
+    "layer": "Cognitive",
+    "full_name": "Confidence Calibration",
+    "description": "appropriately uncertain, well-calibrated"
+  },
+  {
+    "codename": "SHIELD",
+    "layer": "Cognitive",
+    "full_name": "Cognitive Sovereignty Shield",
+    "description": "AI-augmented, human-gated judgment"
+  },
+  {
+    "codename": "SWARM",
+    "layer": "Nature",
+    "full_name": "Pheromone Saturation",
+    "description": "diverse, unexplored paths maintained"
+  },
+  {
+    "codename": "ALBATROSS",
+    "layer": "Nature",
+    "full_name": "L\u00e9vy Flight",
+    "description": "occasional long-range exploration"
+  },
+  {
+    "codename": "SLIME",
+    "layer": "Nature",
+    "full_name": "Physarum Pruner",
+    "description": "efficient, adaptive allocation"
+  },
+  {
+    "codename": "CLONAL",
+    "layer": "Nature",
+    "full_name": "Immune Hypermutator",
+    "description": "differential mutation by quality"
+  },
+  {
+    "codename": "LUMINA",
+    "layer": "Nature",
+    "full_name": "Firefly Attractor",
+    "description": "diverse attraction, controlled clustering"
+  },
+  {
+    "codename": "COLI",
+    "layer": "Nature",
+    "full_name": "Chemotaxis Climber",
+    "description": "gradient ascent with tumble fallback"
+  },
+  {
+    "codename": "ROOT",
+    "layer": "Nature",
+    "full_name": "Mycorrhizal Allocator",
+    "description": "fair, resilience-preserving allocation"
+  },
+  {
+    "codename": "HUMPBACK",
+    "layer": "Nature",
+    "full_name": "Whale Spiral",
+    "description": "annealed convergence"
+  },
+  {
+    "codename": "CUCKOO",
+    "layer": "Nature",
+    "full_name": "Cuckoo Parasite",
+    "description": "disruptive variants pruned or promoted"
+  },
+  {
+    "codename": "REEF",
+    "layer": "Nature",
+    "full_name": "Coral Reef Evolver",
+    "description": "maximal diversity with selection"
+  },
+  {
+    "codename": "TUNNEL",
+    "layer": "Physics",
+    "full_name": "Quantum Tunneling",
+    "description": "genuine orthodoxy penetration"
+  },
+  {
+    "codename": "PAULI",
+    "layer": "Physics",
+    "full_name": "Pauli Exclusion",
+    "description": "state-distinct identity"
+  },
+  {
+    "codename": "CRITICAL",
+    "layer": "Physics",
+    "full_name": "Phase Transition",
+    "description": "verified regime shift"
+  },
+  {
+    "codename": "PARSEC",
+    "layer": "Physics",
+    "full_name": "Fine Tuning",
+    "description": "cosmologically precise tuning"
+  },
+  {
+    "codename": "HAWKING",
+    "layer": "Physics",
+    "full_name": "Hawking Radiation",
+    "description": "information leakage / auditability"
+  },
+  {
+    "codename": "CASIMIR",
+    "layer": "Physics",
+    "full_name": "Casimir Effect",
+    "description": "deliberate absence produces value"
+  },
+  {
+    "codename": "KELVIN",
+    "layer": "Physics",
+    "full_name": "Absolute Zero",
+    "description": "honest bounded claims"
+  },
+  {
+    "codename": "LUMEN",
+    "layer": "Physics",
+    "full_name": "Speed of Light",
+    "description": "latency respects causal chain"
+  },
+  {
+    "codename": "BELL",
+    "layer": "Physics",
+    "full_name": "Entanglement",
+    "description": "genuine coupled-system effect"
+  },
+  {
+    "codename": "ZEROPOINT",
+    "layer": "Physics",
+    "full_name": "Vacuum Fluctuation",
+    "description": "healthy baseline variance present"
+  }
+]
