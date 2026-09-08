@@ -12,12 +12,6 @@
     "stars": 0
   },
   {
-    "name": "birch-rig-boots",
-    "description": "BJR \u2014 boot configurator experience site (e2e: 17/21 baseline, 21/21 target)",
-    "tests": 0,
-    "stars": 0
-  },
-  {
     "name": "communications-studio",
     "description": "Communications studio \u2014 gated protocol engine with scored formulas and hard gates",
     "tests": 2,
@@ -54,12 +48,6 @@
     "stars": 0
   },
   {
-    "name": "mike-rodgers-site",
-    "description": "Personal site \u2014 Forward Deployed Engineer \u00b7 links to mrodgersjs-web studios",
-    "tests": 0,
-    "stars": 0
-  },
-  {
     "name": "mrodgersjs-web",
     "description": "Profile README \u2014 Forward Deployed Engineer \u00b7 governed AI systems",
     "tests": 0,
@@ -69,12 +57,6 @@
     "name": "mrodgersjs-web-teammate",
     "description": "npx mrodgersjs-web \u2014 install Mike Rodgers as a local Forward Deployed Engineer teammate",
     "tests": 1,
-    "stars": 0
-  },
-  {
-    "name": "openwork",
-    "description": "OpenWork power-user workstation with v5 audit chain, v10 cards/undo/workflow, and 36GB RIG node integration",
-    "tests": 0,
     "stars": 0
   },
   {

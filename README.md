@@ -85,23 +85,20 @@ Each agent spec ships as a self-contained persona — YAML frontmatter (`name`, 
 
 ## Repos
 
-29 public repositories under [github.com/mrodgersjs-web](https://github.com/mrodgersjs-web). Machine-readable: [`catalog/repos.json`](catalog/repos.json).
+26 of the 29 public repositories under [github.com/mrodgersjs-web](https://github.com/mrodgersjs-web). Machine-readable: [`catalog/repos.json`](catalog/repos.json).
 
 | Repo | Description | Test files | Stars |
 |---|---|---|---|
 | [`agency-studio`](https://github.com/mrodgersjs-web/agency-studio) | Agency studio — department-shaped agent teams with hard role boundaries | 0 | 0 |
 | [`app-factory-studio`](https://github.com/mrodgersjs-web/app-factory-studio) | App factory studio — spec paragraph to deterministic app scaffold with proof gates | 1 | 0 |
-| [`birch-rig-boots`](https://github.com/mrodgersjs-web/birch-rig-boots) | BJR — boot configurator experience site (e2e: 17/21 baseline, 21/21 target) | 0 | 0 |
 | [`communications-studio`](https://github.com/mrodgersjs-web/communications-studio) | Communications studio — gated protocol engine with scored formulas and hard gates | 2 | 0 |
 | [`design-studio`](https://github.com/mrodgersjs-web/design-studio) | Design studio — public tokens, components, and FDE UI review checklists | 0 | 0 |
 | [`doctrine`](https://github.com/mrodgersjs-web/doctrine) | Operating doctrine agents load before they act — proof standards, gates, TAC rules | 0 | 0 |
 | [`fde-portfolio`](https://github.com/mrodgersjs-web/fde-portfolio) | Forward Deployed Engineer portfolio — discovery to go-live playbooks, evals, handoff templates | 0 | 0 |
 | [`jake-studio`](https://github.com/mrodgersjs-web/jake-studio) | Jake studio — local-first operator layer with L10 self-evolving harness and closed loops | 3 | 0 |
 | [`mesh-studio`](https://github.com/mrodgersjs-web/mesh-studio) | Mesh studio — probe, boot, recover multi-node AI subsystems with proof | 10 | 0 |
-| [`mike-rodgers-site`](https://github.com/mrodgersjs-web/mike-rodgers-site) | Personal site — Forward Deployed Engineer · links to mrodgersjs-web studios | 0 | 0 |
 | [`mrodgersjs-web`](https://github.com/mrodgersjs-web/mrodgersjs-web) | Profile README — Forward Deployed Engineer · governed AI systems | 0 | 0 |
 | [`mrodgersjs-web-teammate`](https://github.com/mrodgersjs-web/mrodgersjs-web-teammate) | npx mrodgersjs-web — install Mike Rodgers as a local Forward Deployed Engineer teammate | 1 | 0 |
-| [`openwork`](https://github.com/mrodgersjs-web/openwork) | OpenWork power-user workstation with v5 audit chain, v10 cards/undo/workflow, and 36GB RIG node integration | 0 | 0 |
 | [`patents`](https://github.com/mrodgersjs-web/patents) | Patent family status teaser — no claims, no enabling IP | 0 | 0 |
 | [`proof-gate-action`](https://github.com/mrodgersjs-web/proof-gate-action) | GitHub Action that fails a PR unless it ships a signed ProofPacket — no proof, no merge | 7 | 0 |
 | [`proof-studio`](https://github.com/mrodgersjs-web/proof-studio) | Signed ProofPackets that catch AI agents when they lie about done | 21 | 0 |

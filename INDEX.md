@@ -34,7 +34,6 @@ Alphabetical index of every entry across the RIG public estate: 33 skills, 232 d
 | [BELL](https://github.com/mrodgersjs-web/rig-deviate#the-40-engines) | Engine | Physics — Entanglement |
 | [Bilibili Content Strategist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/marketing) | Agent | marketing |
 | [BIM/GIS Specialist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/gis) | Agent | gis |
-| [birch-rig-boots](https://github.com/mrodgersjs-web/birch-rig-boots) | Repo | 0 test files |
 | [Blender Add-on Engineer](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/game-development) | Agent | game-development |
 | [Blockchain Security Auditor](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/security) | Agent | security |
 | [Book Co-Author](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/marketing) | Agent | marketing |
@@ -159,7 +158,6 @@ Alphabetical index of every entry across the RIG public estate: 33 skills, 232 d
 | [Medical Billing & Coding Specialist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/specialized) | Agent | specialized |
 | [Meeting Notes Specialist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/project-management) | Agent | project-management |
 | [mesh-studio](https://github.com/mrodgersjs-web/mesh-studio) | Repo | 10 test files |
-| [mike-rodgers-site](https://github.com/mrodgersjs-web/mike-rodgers-site) | Repo | 0 test files |
 | [Minimal Change Engineer](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/engineering) | Agent | engineering |
 | [Mobile App Builder](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/engineering) | Agent | engineering |
 | [Model QA Specialist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/specialized) | Agent | specialized |
@@ -170,7 +168,6 @@ Alphabetical index of every entry across the RIG public estate: 33 skills, 232 d
 | [Narrative Designer](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/game-development) | Agent | game-development |
 | [Narratologist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/academic) | Agent | academic |
 | [Offer & Lead Gen Strategist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/sales) | Agent | sales |
-| [openwork](https://github.com/mrodgersjs-web/openwork) | Repo | 0 test files |
 | [Operations Manager](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/specialized) | Agent | specialized |
 | [Organizational Psychologist](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/specialized) | Agent | specialized |
 | [OrgScript Engineer](https://github.com/mrodgersjs-web/rig-domain-agents/tree/main/engineering) | Agent | engineering |
