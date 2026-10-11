@@ -1,0 +1,33 @@
+name: refresh-catalog
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -e '.[dev]'
+      - name: Crawl live public repos
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          rig-directory crawl --live --checkouts "$RUNNER_TEMP/repos" --out catalog/catalog.json
+          rig-directory index
+          rig-directory readme
+          rig-directory stats
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refreshed-catalog
+          path: |
+            catalog/catalog.json
+            INDEX.md
+            README.md

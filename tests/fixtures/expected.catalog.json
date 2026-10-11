@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "owner": "mrodgersjs-web",
+  "counts": {
+    "repos": 6,
+    "repos_crawled": 5,
+    "skills": 2,
+    "skills_unique_names": 2,
+    "agents": 4,
+    "agents_unique_names": 4,
+    "engines": 3
+  },
+  "repos": [
+    {
+      "name": "mesh-studio",
+      "description": "Mesh studio",
+      "url": "https://github.com/mrodgersjs-web/mesh-studio",
+      "fork": false,
+      "archived": false,
+      "crawled": true,
+      "commit": null,
+      "test_files": 2,
+      "counts": {
+        "skills": 0,
+        "agents": 0,
+        "engines": 0
+      }
+    },
+    {
+      "name": "nanobrowser",
+      "description": "A fork",
+      "url": "https://github.com/mrodgersjs-web/nanobrowser",
+      "fork": true,
+      "archived": false,
+      "crawled": false,
+      "commit": null,
+      "test_files": 0,
+      "counts": {
+        "skills": 0,
+        "agents": 0,
+        "engines": 0
+      }
+    },
+    {
+      "name": "proof-studio",
+      "description": "Proof studio",
+      "url": "https://github.com/mrodgersjs-web/proof-studio",
+      "fork": false,
+      "archived": true,
+      "crawled": true,
+      "commit": null,
+      "test_files": 1,
+      "counts": {
+        "skills": 0,
+        "agents": 0,
+        "engines": 0
+      }
+    },
+    {
+      "name": "rig-deviate",
+      "description": "Deviation engines",
+      "url": "https://github.com/mrodgersjs-web/rig-deviate",
+      "fork": false,
+      "archived": false,
+      "crawled": true,
+      "commit": null,
+      "test_files": 1,
+      "counts": {
+        "skills": 0,
+        "agents": 0,
+        "engines": 3
+      }
+    },
+    {
+      "name": "rig-domain-agents",
+      "description": "Domain agent role specs",
+      "url": "https://github.com/mrodgersjs-web/rig-domain-agents",
+      "fork": false,
+      "archived": false,
+      "crawled": true,
+      "commit": null,
+      "test_files": 0,
+      "counts": {
+        "skills": 0,
+        "agents": 3,
+        "engines": 0
+      }
+    },
+    {
+      "name": "rig-marketplace",
+      "description": "Installable packs",
+      "url": "https://github.com/mrodgersjs-web/rig-marketplace",
+      "fork": false,
+      "archived": false,
+      "crawled": true,
+      "commit": null,
+      "test_files": 0,
+      "counts": {
+        "skills": 2,
+        "agents": 1,
+        "engines": 0
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "frontend-design",
+      "description": "Create distinctive frontend interfaces.",
+      "repo": "rig-marketplace",
+      "path": "packs/rig-design-pack/skills/frontend-design/SKILL.md",
+      "pack": "rig-design-pack",
+      "triggers": [],
+      "url": "https://github.com/mrodgersjs-web/rig-marketplace/blob/HEAD/packs/rig-design-pack/skills/frontend-design/SKILL.md"
+    },
+    {
+      "name": "meta-usage-telemetry",
+      "description": "Records per-asset install and run telemetry.",
+      "repo": "rig-marketplace",
+      "path": "packs/rig-gtm-pack/skills/meta-usage-telemetry/SKILL.md",
+      "pack": "rig-gtm-pack",
+      "triggers": [
+        "how often is this skill used",
+        "which skills are unused"
+      ],
+      "url": "https://github.com/mrodgersjs-web/rig-marketplace/blob/HEAD/packs/rig-gtm-pack/skills/meta-usage-telemetry/SKILL.md"
+    }
+  ],
+  "agents": [
+    {
+      "name": "Historian",
+      "description": "Expert in historical analysis, periodization, and material culture",
+      "department": "academic",
+      "repo": "rig-domain-agents",
+      "path": "academic/academic-historian.md",
+      "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/academic/academic-historian.md"
+    },
+    {
+      "name": "Unity Architect",
+      "description": "Designs data-driven Unity systems | scalable, testable",
+      "department": "game-development",
+      "repo": "rig-domain-agents",
+      "path": "game-development/unity/unity-architect.md",
+      "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/game-development/unity/unity-architect.md"
+    },
+    {
+      "name": "agent-demo-lead-engine",
+      "description": "Turns demo requests into scored leads.",
+      "department": "rig-gtm-pack",
+      "repo": "rig-marketplace",
+      "path": "packs/rig-gtm-pack/agents/agent-demo-lead-engine.md",
+      "url": "https://github.com/mrodgersjs-web/rig-marketplace/blob/HEAD/packs/rig-gtm-pack/agents/agent-demo-lead-engine.md"
+    },
+    {
+      "name": "Sales Coach",
+      "description": "Coaches reps on discovery calls and deal reviews",
+      "department": "sales",
+      "repo": "rig-domain-agents",
+      "path": "sales/sales-coach.md",
+      "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/sales/sales-coach.md"
+    }
+  ],
+  "engines": [
+    {
+      "id": 1,
+      "codename": "GRAVITON",
+      "layer": "cognitive",
+      "full_name": "Gravity Escape",
+      "description": "Escape the generic median.",
+      "repo": "rig-deviate",
+      "path": "rig_deviate/engines.py",
+      "url": "https://github.com/mrodgersjs-web/rig-deviate/blob/HEAD/rig_deviate/engines.py"
+    },
+    {
+      "id": 2,
+      "codename": "ANCHOR",
+      "layer": "cognitive",
+      "full_name": "Reality Anchor",
+      "description": "Tie claims to evidence.",
+      "repo": "rig-deviate",
+      "path": "rig_deviate/engines.py",
+      "url": "https://github.com/mrodgersjs-web/rig-deviate/blob/HEAD/rig_deviate/engines.py"
+    },
+    {
+      "id": 31,
+      "codename": "ENTROPY",
+      "layer": "physics",
+      "full_name": "Entropy Gate",
+      "description": "Hard state gate.",
+      "repo": "rig-deviate",
+      "path": "rig_deviate/engines.py",
+      "url": "https://github.com/mrodgersjs-web/rig-deviate/blob/HEAD/rig_deviate/engines.py"
+    }
+  ]
+}

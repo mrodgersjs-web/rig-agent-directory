@@ -1,0 +1,9 @@
+[
+  {"name": "rig-domain-agents", "description": "Domain agent role specs", "fork": false, "private": false, "archived": false},
+  {"name": "rig-marketplace", "description": "Installable packs", "fork": false, "private": false, "archived": false},
+  {"name": "rig-deviate", "description": "Deviation engines", "fork": false, "private": false, "archived": false},
+  {"name": "mesh-studio", "description": "Mesh studio", "fork": false, "private": false, "archived": false},
+  {"name": "proof-studio", "description": "Proof studio", "fork": false, "private": false, "archived": true},
+  {"name": "nanobrowser", "description": "A fork", "fork": true, "private": false, "archived": false},
+  {"name": "secret-repo", "description": "must never appear", "fork": false, "private": true, "archived": false}
+]
