@@ -1,0 +1,35 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e '.[dev]'
+      - name: Lint
+        run: ruff check .
+      - name: Tests
+        run: pytest -q
+      - name: Smoke - rebuild catalog from fixtures and validate against the schema
+        run: |
+          rig-directory crawl --repos-meta tests/fixtures/repos-meta.json \
+            --checkouts tests/fixtures/checkouts --out "$RUNNER_TEMP/catalog.json"
+          rig-directory validate --catalog "$RUNNER_TEMP/catalog.json"
+          diff "$RUNNER_TEMP/catalog.json" tests/fixtures/expected.catalog.json
+          rig-directory search --catalog "$RUNNER_TEMP/catalog.json" --kind engine gravity
+      - name: Committed catalog is valid and README / INDEX are generated from it
+        run: |
+          rig-directory validate
+          rig-directory readme --check
+          rig-directory index --out "$RUNNER_TEMP/INDEX.md"
+          diff "$RUNNER_TEMP/INDEX.md" INDEX.md

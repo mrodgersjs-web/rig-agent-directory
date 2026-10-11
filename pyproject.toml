@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rig-agent-directory"
+version = "0.1.0"
+description = "Crawler, typed JSON catalog, search CLI and generated index for the public mrodgersjs-web repos"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.20"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+rig-directory = "rig_directory.cli:main"
+
+[tool.setuptools]
+packages = ["rig_directory"]
+
+[tool.setuptools.package-data]
+rig_directory = ["schema/*.json"]
+
+[tool.ruff]
+line-length = 150
+extend-exclude = ["tests/fixtures"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

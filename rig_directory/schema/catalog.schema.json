@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mrodgersjs-web/rig-agent-directory/schema/catalog.schema.json",
+  "title": "RIG agent directory catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "owner", "counts", "repos", "skills", "agents", "engines"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "owner": {"type": "string", "minLength": 1},
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repos", "repos_crawled", "skills", "skills_unique_names", "agents", "agents_unique_names", "engines"],
+      "properties": {
+        "repos": {"type": "integer", "minimum": 0},
+        "repos_crawled": {"type": "integer", "minimum": 0},
+        "skills": {"type": "integer", "minimum": 0},
+        "skills_unique_names": {"type": "integer", "minimum": 0},
+        "agents": {"type": "integer", "minimum": 0},
+        "agents_unique_names": {"type": "integer", "minimum": 0},
+        "engines": {"type": "integer", "minimum": 0}
+      }
+    },
+    "repos": {"type": "array", "items": {"$ref": "#/$defs/repo"}},
+    "skills": {"type": "array", "items": {"$ref": "#/$defs/skill"}},
+    "agents": {"type": "array", "items": {"$ref": "#/$defs/agent"}},
+    "engines": {"type": "array", "items": {"$ref": "#/$defs/engine"}}
+  },
+  "$defs": {
+    "url": {"type": "string", "pattern": "^https://github\\.com/"},
+    "name": {"type": "string", "minLength": 1},
+    "repo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "url", "fork", "archived", "crawled", "commit", "test_files", "counts"],
+      "properties": {
+        "name": {"$ref": "#/$defs/name"},
+        "description": {"type": "string"},
+        "url": {"$ref": "#/$defs/url"},
+        "fork": {"type": "boolean"},
+        "archived": {"type": "boolean"},
+        "crawled": {"type": "boolean"},
+        "commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+        "test_files": {"type": "integer", "minimum": 0},
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["skills", "agents", "engines"],
+          "properties": {
+            "skills": {"type": "integer", "minimum": 0},
+            "agents": {"type": "integer", "minimum": 0},
+            "engines": {"type": "integer", "minimum": 0}
+          }
+        }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "repo", "path", "pack", "triggers", "url"],
+      "properties": {
+        "name": {"$ref": "#/$defs/name"},
+        "description": {"type": "string", "minLength": 1},
+        "repo": {"$ref": "#/$defs/name"},
+        "path": {"$ref": "#/$defs/name"},
+        "pack": {"type": ["string", "null"]},
+        "triggers": {"type": "array", "items": {"type": "string"}},
+        "url": {"$ref": "#/$defs/url"}
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "department", "repo", "path", "url"],
+      "properties": {
+        "name": {"$ref": "#/$defs/name"},
+        "description": {"type": "string", "minLength": 1},
+        "department": {"type": "string"},
+        "repo": {"$ref": "#/$defs/name"},
+        "path": {"$ref": "#/$defs/name"},
+        "url": {"$ref": "#/$defs/url"}
+      }
+    },
+    "engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "codename", "layer", "full_name", "description", "repo", "path", "url"],
+      "properties": {
+        "id": {"type": "integer", "minimum": 1},
+        "codename": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
+        "layer": {"$ref": "#/$defs/name"},
+        "full_name": {"$ref": "#/$defs/name"},
+        "description": {"type": "string"},
+        "repo": {"$ref": "#/$defs/name"},
+        "path": {"$ref": "#/$defs/name"},
+        "url": {"$ref": "#/$defs/url"}
+      }
+    }
+  }
+}
