@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "repos": [
+    {
+      "repo": "rig-domain-agents",
+      "origin": "adapted",
+      "upstream_owner": "msitarzewski",
+      "upstream_repo": "agency-agents",
+      "upstream_url": "https://github.com/msitarzewski/agency-agents",
+      "license": "MIT",
+      "license_url": "https://github.com/msitarzewski/agency-agents/blob/main/LICENSE",
+      "note": "Domain-agent role specs in this repo are adapted from msitarzewski/agency-agents (MIT). They are not original work by the catalog owner.",
+      "evidence": {
+        "method": "byte-comparison of git blobs against the upstream repository",
+        "measured_on": "2026-10-19",
+        "blobs_total": 260,
+        "blobs_identical_to_upstream": 161,
+        "upstream_attribution_commit": "1697f62"
+      }
+    }
+  ]
+}

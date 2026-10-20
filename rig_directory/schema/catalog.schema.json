@@ -4,53 +4,177 @@
   "title": "RIG agent directory catalog",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "owner", "counts", "repos", "skills", "agents", "engines"],
+  "required": [
+    "schema_version",
+    "owner",
+    "counts",
+    "repos",
+    "skills",
+    "agents",
+    "engines"
+  ],
   "properties": {
-    "schema_version": {"const": 1},
-    "owner": {"type": "string", "minLength": 1},
+    "schema_version": {
+      "const": 1
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
     "counts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["repos", "repos_crawled", "skills", "skills_unique_names", "agents", "agents_unique_names", "engines"],
+      "required": [
+        "repos",
+        "repos_crawled",
+        "skills",
+        "skills_unique_names",
+        "agents",
+        "agents_unique_names",
+        "agents_attributed",
+        "agents_original",
+        "engines"
+      ],
       "properties": {
-        "repos": {"type": "integer", "minimum": 0},
-        "repos_crawled": {"type": "integer", "minimum": 0},
-        "skills": {"type": "integer", "minimum": 0},
-        "skills_unique_names": {"type": "integer", "minimum": 0},
-        "agents": {"type": "integer", "minimum": 0},
-        "agents_unique_names": {"type": "integer", "minimum": 0},
-        "engines": {"type": "integer", "minimum": 0}
+        "repos": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "repos_crawled": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "skills": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "skills_unique_names": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "agents": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "agents_unique_names": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "engines": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "agents_attributed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Agent entries stamped with an upstream source block (adapted, not original)."
+        },
+        "agents_original": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Agent entries with no source block (original to the catalog owner)."
+        }
       }
     },
-    "repos": {"type": "array", "items": {"$ref": "#/$defs/repo"}},
-    "skills": {"type": "array", "items": {"$ref": "#/$defs/skill"}},
-    "agents": {"type": "array", "items": {"$ref": "#/$defs/agent"}},
-    "engines": {"type": "array", "items": {"$ref": "#/$defs/engine"}}
+    "repos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/repo"
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/skill"
+      }
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/agent"
+      }
+    },
+    "engines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/engine"
+      }
+    }
   },
   "$defs": {
-    "url": {"type": "string", "pattern": "^https://github\\.com/"},
-    "name": {"type": "string", "minLength": 1},
+    "url": {
+      "type": "string",
+      "pattern": "^https://github\\.com/"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
     "repo": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "description", "url", "fork", "archived", "crawled", "commit", "test_files", "counts"],
+      "required": [
+        "name",
+        "description",
+        "url",
+        "fork",
+        "archived",
+        "crawled",
+        "commit",
+        "test_files",
+        "counts"
+      ],
       "properties": {
-        "name": {"$ref": "#/$defs/name"},
-        "description": {"type": "string"},
-        "url": {"$ref": "#/$defs/url"},
-        "fork": {"type": "boolean"},
-        "archived": {"type": "boolean"},
-        "crawled": {"type": "boolean"},
-        "commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
-        "test_files": {"type": "integer", "minimum": 0},
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "type": "string"
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        },
+        "fork": {
+          "type": "boolean"
+        },
+        "archived": {
+          "type": "boolean"
+        },
+        "crawled": {
+          "type": "boolean"
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "test_files": {
+          "type": "integer",
+          "minimum": 0
+        },
         "counts": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["skills", "agents", "engines"],
+          "required": [
+            "skills",
+            "agents",
+            "engines"
+          ],
           "properties": {
-            "skills": {"type": "integer", "minimum": 0},
-            "agents": {"type": "integer", "minimum": 0},
-            "engines": {"type": "integer", "minimum": 0}
+            "skills": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "agents": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "engines": {
+              "type": "integer",
+              "minimum": 0
+            }
           }
         }
       }
@@ -58,43 +182,162 @@
     "skill": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "description", "repo", "path", "pack", "triggers", "url"],
+      "required": [
+        "name",
+        "description",
+        "repo",
+        "path",
+        "pack",
+        "triggers",
+        "url"
+      ],
       "properties": {
-        "name": {"$ref": "#/$defs/name"},
-        "description": {"type": "string", "minLength": 1},
-        "repo": {"$ref": "#/$defs/name"},
-        "path": {"$ref": "#/$defs/name"},
-        "pack": {"type": ["string", "null"]},
-        "triggers": {"type": "array", "items": {"type": "string"}},
-        "url": {"$ref": "#/$defs/url"}
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repo": {
+          "$ref": "#/$defs/name"
+        },
+        "path": {
+          "$ref": "#/$defs/name"
+        },
+        "pack": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        }
       }
     },
     "agent": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "description", "department", "repo", "path", "url"],
+      "required": [
+        "name",
+        "description",
+        "department",
+        "repo",
+        "path",
+        "url"
+      ],
       "properties": {
-        "name": {"$ref": "#/$defs/name"},
-        "description": {"type": "string", "minLength": 1},
-        "department": {"type": "string"},
-        "repo": {"$ref": "#/$defs/name"},
-        "path": {"$ref": "#/$defs/name"},
-        "url": {"$ref": "#/$defs/url"}
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "department": {
+          "type": "string"
+        },
+        "repo": {
+          "$ref": "#/$defs/name"
+        },
+        "path": {
+          "$ref": "#/$defs/name"
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
       }
     },
     "engine": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "codename", "layer", "full_name", "description", "repo", "path", "url"],
+      "required": [
+        "id",
+        "codename",
+        "layer",
+        "full_name",
+        "description",
+        "repo",
+        "path",
+        "url"
+      ],
       "properties": {
-        "id": {"type": "integer", "minimum": 1},
-        "codename": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]*$"},
-        "layer": {"$ref": "#/$defs/name"},
-        "full_name": {"$ref": "#/$defs/name"},
-        "description": {"type": "string"},
-        "repo": {"$ref": "#/$defs/name"},
-        "path": {"$ref": "#/$defs/name"},
-        "url": {"$ref": "#/$defs/url"}
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "codename": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9_]*$"
+        },
+        "layer": {
+          "$ref": "#/$defs/name"
+        },
+        "full_name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "type": "string"
+        },
+        "repo": {
+          "$ref": "#/$defs/name"
+        },
+        "path": {
+          "$ref": "#/$defs/name"
+        },
+        "url": {
+          "$ref": "#/$defs/url"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "upstream_owner",
+        "upstream_repo",
+        "upstream_url",
+        "license",
+        "license_url",
+        "note"
+      ],
+      "properties": {
+        "origin": {
+          "const": "adapted"
+        },
+        "upstream_owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "upstream_repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "upstream_url": {
+          "$ref": "#/$defs/url"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license_url": {
+          "$ref": "#/$defs/url"
+        },
+        "note": {
+          "type": "string",
+          "minLength": 10
+        }
       }
     }
   }

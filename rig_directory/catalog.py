@@ -6,6 +6,7 @@ import subprocess
 from importlib import resources
 from pathlib import Path
 
+from . import attribution
 from .extract import extract_repo_content
 
 SCHEMA_VERSION = 1
@@ -77,13 +78,17 @@ def build_catalog(owner: str, repos_meta: list[dict], checkouts: Path) -> dict:
 
 
 def compute_counts(catalog: dict) -> dict:
+    agents = catalog["agents"]
+    attributed = sum(1 for a in agents if a.get("source"))
     return {
         "repos": len(catalog["repos"]),
         "repos_crawled": sum(1 for r in catalog["repos"] if r["crawled"]),
         "skills": len(catalog["skills"]),
         "skills_unique_names": len({s["name"] for s in catalog["skills"]}),
-        "agents": len(catalog["agents"]),
-        "agents_unique_names": len({a["name"] for a in catalog["agents"]}),
+        "agents": len(agents),
+        "agents_unique_names": len({a["name"] for a in agents}),
+        "agents_attributed": attributed,
+        "agents_original": len(agents) - attributed,
         "engines": len(catalog["engines"]),
     }
 
@@ -100,6 +105,26 @@ def validate(catalog: dict) -> list[str]:
         return problems
     if catalog["counts"] != compute_counts(catalog):
         problems.append("counts do not match the entries")
+    # Every entry from a repo listed in data/attribution.json must carry its
+    # source block, and no other repo may claim one. A catalog that lists
+    # adapted work as original is rejected here, not just in the docs.
+    for repo in attribution.attributed_repos(catalog):
+        for kind in ("skills", "agents", "engines"):
+            missing = [e for e in catalog[kind] if e["repo"] == repo and not e.get("source")]
+            if missing:
+                names = ", ".join(str(e.get("name") or e.get("codename")) for e in missing[:3])
+                problems.append(
+                    f"{kind} entries from attributed repo {repo} are missing a source block: {names}"
+                    + (" ..." if len(missing) > 3 else "")
+                )
+    known = set(attribution.records())
+    for kind in ("skills", "agents", "engines"):
+        for entry in catalog[kind]:
+            if entry.get("source") and entry["repo"] not in known:
+                problems.append(
+                    f"{kind} entry {entry.get('name') or entry.get('codename')} from {entry['repo']} "
+                    "claims a source block but that repo is not in data/attribution.json"
+                )
     names = {r["name"] for r in catalog["repos"]}
     for kind in ("skills", "agents", "engines"):
         for item in catalog[kind]:

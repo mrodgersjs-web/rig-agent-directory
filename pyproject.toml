@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rig-agent-directory"
-version = "0.2.0"
+version = "0.3.0"
 description = "Crawler, typed JSON catalog, search CLI and generated index for the public mrodgersjs-web repos"
 readme = "README.md"
 license = { text = "MIT" }
@@ -34,8 +34,7 @@ rig-directory = "rig_directory.cli:main"
 where = ["."]
 
 [tool.setuptools.package-data]
-rig_directory = ["schema/*.json", "py.typed"]
-"rig-directory" = ["schemas/*.json"]
+rig_directory = ["schema/*.json", "data/*.json", "py.typed"]
 
 [tool.ruff]
 line-length = 150

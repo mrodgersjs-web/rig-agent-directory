@@ -108,17 +108,23 @@ def test_index_lists_every_entry_and_escapes_pipes(built):
     for _, e in cat.entries(built):
         assert (e.get("name") or e["codename"]) in md
     assert "scalable, testable" in md and "Designs data-driven Unity systems \\| scalable" in md
-    assert "4 agents" in md
+    assert "4 agent role specs (1 original, 3 adapted from upstream)" in md
 
 
 def test_readme_block_roundtrip(built):
-    readme = f"intro\n{render.START}\nstale\n{render.END}\noutro\n"
+    readme = (
+        f"intro\n{render.START}\nstale\n{render.END}\n\n"
+        f"{render.ATTRIBUTION_START}\nstale\n{render.ATTRIBUTION_END}\noutro\n"
+    )
     new = render.update_readme(readme, built)
     assert new.startswith("intro\n") and new.endswith("\noutro\n")
     assert "| Skills | 2 (2 unique names) |" in new and "stale" not in new
+    assert "## Attribution" in new and "msitarzewski/agency-agents" in new
     assert render.update_readme(new, built) == new
     with pytest.raises(ValueError):
         render.update_readme("no markers", built)
+    with pytest.raises(ValueError):
+        render.update_readme(f"intro\n{render.START}\n{render.END}\n", built)
 
 
 def test_cli_end_to_end(tmp_path):
@@ -134,9 +140,10 @@ def test_cli_end_to_end(tmp_path):
     assert run_cli("index", "--catalog", str(out), "--out", str(idx)).returncode == 0
     assert "Historian" in idx.read_text()
     readme = tmp_path / "README.md"
-    readme.write_text(f"{render.START}\n{render.END}\n")
+    readme.write_text(f"{render.START}\n{render.END}\n{render.ATTRIBUTION_START}\n{render.ATTRIBUTION_END}\n")
     assert run_cli("readme", "--catalog", str(out), "--readme", str(readme), "--check").returncode == 1
     assert run_cli("readme", "--catalog", str(out), "--readme", str(readme)).returncode == 0
+    assert "msitarzewski/agency-agents" in readme.read_text()
     assert run_cli("readme", "--catalog", str(out), "--readme", str(readme), "--check").returncode == 0
     out.write_text(json.dumps({"schema_version": 1}))
     assert run_cli("validate", "--catalog", str(out)).returncode == 1

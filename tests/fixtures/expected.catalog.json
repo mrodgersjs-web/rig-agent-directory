@@ -8,6 +8,8 @@
     "skills_unique_names": 2,
     "agents": 4,
     "agents_unique_names": 4,
+    "agents_attributed": 3,
+    "agents_original": 1,
     "engines": 3
   },
   "repos": [
@@ -132,6 +134,15 @@
       "department": "academic",
       "repo": "rig-domain-agents",
       "path": "academic/academic-historian.md",
+      "source": {
+        "origin": "adapted",
+        "upstream_owner": "msitarzewski",
+        "upstream_repo": "agency-agents",
+        "upstream_url": "https://github.com/msitarzewski/agency-agents",
+        "license": "MIT",
+        "license_url": "https://github.com/msitarzewski/agency-agents/blob/main/LICENSE",
+        "note": "Domain-agent role specs in this repo are adapted from msitarzewski/agency-agents (MIT). They are not original work by the catalog owner."
+      },
       "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/academic/academic-historian.md"
     },
     {
@@ -140,6 +151,15 @@
       "department": "game-development",
       "repo": "rig-domain-agents",
       "path": "game-development/unity/unity-architect.md",
+      "source": {
+        "origin": "adapted",
+        "upstream_owner": "msitarzewski",
+        "upstream_repo": "agency-agents",
+        "upstream_url": "https://github.com/msitarzewski/agency-agents",
+        "license": "MIT",
+        "license_url": "https://github.com/msitarzewski/agency-agents/blob/main/LICENSE",
+        "note": "Domain-agent role specs in this repo are adapted from msitarzewski/agency-agents (MIT). They are not original work by the catalog owner."
+      },
       "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/game-development/unity/unity-architect.md"
     },
     {
@@ -156,6 +176,15 @@
       "department": "sales",
       "repo": "rig-domain-agents",
       "path": "sales/sales-coach.md",
+      "source": {
+        "origin": "adapted",
+        "upstream_owner": "msitarzewski",
+        "upstream_repo": "agency-agents",
+        "upstream_url": "https://github.com/msitarzewski/agency-agents",
+        "license": "MIT",
+        "license_url": "https://github.com/msitarzewski/agency-agents/blob/main/LICENSE",
+        "note": "Domain-agent role specs in this repo are adapted from msitarzewski/agency-agents (MIT). They are not original work by the catalog owner."
+      },
       "url": "https://github.com/mrodgersjs-web/rig-domain-agents/blob/HEAD/sales/sales-coach.md"
     }
   ],

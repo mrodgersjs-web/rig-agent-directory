@@ -14,6 +14,8 @@ import ast
 import re
 from pathlib import Path
 
+from . import attribution
+
 SKIP_DIRS = {".git", "node_modules", ".venv", "venv", "__pycache__", "dist", "build"}
 NON_AGENT_NAMES = {"readme.md", "index.md", "contributing.md", "agents.md", "skill.md", "security.md"}
 TEST_NAME = re.compile(r"(^test_.*\.py$)|(_test\.py$)|(\.(test|spec)\.[jt]sx?$)")
@@ -124,13 +126,19 @@ def extract_agent(repo: str, rel: Path, text: str) -> dict | None:
         return None
     pack = _pack(rel)
     department = pack or (rel.parts[0] if len(rel.parts) > 1 else "")
-    return {
+    entry = {
         "name": _clean(fm["name"]),
         "description": _clean(fm["description"]),
         "department": department,
         "repo": repo,
         "path": rel.as_posix(),
     }
+    # Adapted work is stamped at extraction time so a fresh crawl can never
+    # present upstream material as original.
+    source = attribution.source_for(repo)
+    if source is not None:
+        entry["source"] = source
+    return entry
 
 
 def extract_engines(repo: str, rel: Path, text: str) -> list[dict]:

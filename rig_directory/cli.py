@@ -7,8 +7,8 @@ import sys
 import tempfile
 from pathlib import Path
 
+from . import attribution, crawl, render
 from . import catalog as cat
-from . import crawl, render
 
 DEFAULT_CATALOG = Path("catalog/catalog.json")
 
@@ -73,6 +73,31 @@ def cmd_index(a) -> int:
     return 0
 
 
+def cmd_attribute(a) -> int:
+    """Stamp the upstream source block onto every entry of an attributed repo."""
+    catalog = _load(a.catalog)
+    stamped = attribution.stamp(catalog)
+    catalog["counts"] = cat.compute_counts(catalog)
+    problems = cat.validate(catalog)
+    if problems:
+        print("\n".join(problems), file=sys.stderr)
+        return 1
+    _write_json(Path(a.catalog), catalog)
+    repos = attribution.attributed_repos(catalog)
+    noun = "entry" if stamped == 1 else "entries"
+    print(f"stamped {stamped} {noun} from {len(repos)} attributed repo(s): {', '.join(repos)}")
+    return 0
+
+
+def cmd_stats(a) -> int:
+    catalog = _load(a.catalog)
+    print(json.dumps(dict(catalog["counts"]), indent=2))
+    repos = attribution.attributed_repos(catalog)
+    if repos:
+        print(f"\nattributed repos: {', '.join(repos)}")
+    return 0
+
+
 def cmd_readme(a) -> int:
     path = Path(a.readme)
     new = render.update_readme(path.read_text(encoding="utf-8"), _load(a.catalog))
@@ -82,11 +107,6 @@ def cmd_readme(a) -> int:
             return 1
         return 0
     path.write_text(new, encoding="utf-8")
-    return 0
-
-
-def cmd_stats(a) -> int:
-    print(json.dumps(_load(a.catalog)["counts"], indent=2))
     return 0
 
 
@@ -102,11 +122,15 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--out", default=str(DEFAULT_CATALOG))
     c.set_defaults(fn=cmd_crawl)
 
+    s = sub.add_parser("attribute", help="stamp upstream attribution onto every entry of an attributed repo")
+    s.add_argument("--catalog", default=str(DEFAULT_CATALOG))
+    s.set_defaults(fn=cmd_attribute)
+
     for name, fn, help_ in (("validate", cmd_validate, "validate a catalog against the schema"),
                             ("search", cmd_search, "search / filter the catalog"),
                             ("index", cmd_index, "write the markdown index"),
                             ("readme", cmd_readme, "refresh the README counts block"),
-                            ("stats", cmd_stats, "print counts")):
+                            ("stats", cmd_stats, "print counts, split by origin")):
         s = sub.add_parser(name, help=help_)
         s.add_argument("--catalog", default=str(DEFAULT_CATALOG))
         s.set_defaults(fn=fn)
