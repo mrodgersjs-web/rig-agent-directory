@@ -1,0 +1,62 @@
+name: "Feature request"
+description: "Propose a new extractor, kind, or CLI behavior."
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Frame the request as a capability change. Replace placeholder
+        text with the real answer.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "One-sentence summary"
+      description: "What the feature does, in plain language."
+      render: text
+      placeholder: "Add a YAML extractor so repos that ship .yaml agent definitions show up in the catalog."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: "Surface"
+      options:
+        - "CLI command"
+        - "Schema"
+        - "Extractor"
+        - "Renderer"
+        - "Documentation"
+        - "CI / GitHub workflow"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Why this is needed"
+      description: "Who is blocked today and what they would do differently."
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: "Proposed behavior"
+      description: "Exact input/output, argv shape, exit codes, examples."
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: "How this is tested"
+      description: "What planted failure proves the new behavior?"
+      render: text
+    validations:
+      required: true

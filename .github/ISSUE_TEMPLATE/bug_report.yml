@@ -1,0 +1,81 @@
+name: "Bug report"
+description: "Reproduce a behavior we should not ship."
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please fill in the section below so a
+        maintainer can reproduce on a fresh clone. Replace placeholder
+        text.
+
+  - type: input
+    id: version
+    attributes:
+      label: "rig-directory version"
+      description: "The output of `rig-directory --help` (or the version tag in pyproject.toml)."
+      placeholder: "0.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: "Python version"
+      description: "The output of `python3 --version`."
+      placeholder: "3.12.3"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: "Operating system"
+      description: "macOS, Linux distro, or Windows."
+      placeholder: "macOS 14.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: command
+    attributes:
+      label: "Command that misbehaved"
+      options:
+        - "rig-directory crawl"
+        - "rig-directory validate"
+        - "rig-directory search"
+        - "rig-directory index"
+        - "rig-directory readme"
+        - "rig-directory stats"
+        - "other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Reproduce"
+      description: "Exact commands and inputs."
+      render: shell
+      placeholder: "git clone …\ncd rig-agent-directory\npython3 -m venv .venv\n. .venv/bin/activate\npip install -e '.[dev]'\nrig-directory validate"
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: "Observed"
+      description: "What actually happens. Paste the literal output."
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected"
+      description: "What you expected to happen instead."
+      render: text
+    validations:
+      required: true

@@ -4,31 +4,46 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rig-agent-directory"
-version = "0.1.0"
+version = "0.2.0"
 description = "Crawler, typed JSON catalog, search CLI and generated index for the public mrodgersjs-web repos"
 readme = "README.md"
 license = { text = "MIT" }
+authors = [{ name = "Mike Rodgers" }]
 requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = ["jsonschema>=4.20"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8", "ruff>=0.5"]
+dev = ["pytest>=8", "pytest-cov>=4", "ruff>=0.5"]
+
+[project.urls]
+Homepage = "https://github.com/mrodgersjs-web/rig-agent-directory"
+Repository = "https://github.com/mrodgersjs-web/rig-agent-directory"
+Issues = "https://github.com/mrodgersjs-web/rig-agent-directory/issues"
 
 [project.scripts]
 rig-directory = "rig_directory.cli:main"
 
-[tool.setuptools]
-packages = ["rig_directory"]
+[tool.setuptools.packages.find]
+where = ["."]
 
 [tool.setuptools.package-data]
-rig_directory = ["schema/*.json"]
+rig_directory = ["schema/*.json", "py.typed"]
+"rig-directory" = ["schemas/*.json"]
 
 [tool.ruff]
 line-length = 150
 extend-exclude = ["tests/fixtures"]
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I"]
+select = ["E", "F", "W", "I", "B", "UP"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "-ra --strict-markers"
