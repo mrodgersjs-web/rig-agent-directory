@@ -1,8 +1,20 @@
 # RIG Agent Directory
 
-![status](https://img.shields.io/badge/status-public-blue) ![license](https://img.shields.io/badge/license-MIT-C8A96E) ![catalog](https://img.shields.io/badge/catalog-machine--readable-0A0806)
+[![CI](https://img.shields.io/github/actions/workflow/status/mrodgersjs-web/rig-agent-directory/ci.yml?branch=main&label=CI)](https://github.com/mrodgersjs-web/rig-agent-directory/actions/workflows/ci.yml) ![status](https://img.shields.io/badge/status-public-blue) ![license](https://img.shields.io/badge/license-MIT-C8A96E) ![catalog](https://img.shields.io/badge/catalog-machine--readable-0A0806)
 
 A crawler and catalog for the public repos of [`mrodgersjs-web`](https://github.com/mrodgersjs-web). It reads the repos, pulls out agents, skills, deviation engines and repo metadata, writes one typed JSON catalog, and generates a search CLI and a markdown index from it. Nothing in the catalog is typed by hand.
+
+## Install
+
+This package is **not** published on PyPI. From a fresh checkout:
+
+```
+git clone https://github.com/mrodgersjs-web/rig-agent-directory
+cd rig-agent-directory
+pip install -e ".[dev]"
+```
+
+(`pip install git+https://github.com/mrodgersjs-web/rig-agent-directory` is also supported; bare `pip install rig-agent-directory` 404s because the package is not on PyPI.)
 
 ## What is in the catalog
 
@@ -119,3 +131,7 @@ CI (`.github/workflows/ci.yml`) lints, runs the tests, rebuilds the catalog from
 ## License
 
 MIT, see [`LICENSE`](LICENSE).
+
+---
+
+Built by Mike Rodgers · rodgersintelligence.com
